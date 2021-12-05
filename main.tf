@@ -3,6 +3,13 @@ provider "aws" {
 
     region = "${var.aws_region}"
 }
+terraform {
+  backend "s3" {
+    bucket = "sivaterraform"
+    key    = "myterraform.tfstate"
+    region = "us-east-1"
+  }
+}
 
 terraform {
   required_version = "<= 0.14" #Forcing which version of Terraform needs to be used
