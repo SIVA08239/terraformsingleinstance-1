@@ -1,4 +1,5 @@
 variable "aws_region" {}
+variable "profile" {}
 variable "amis" {
     description = "AMIs by region"
     default = {
