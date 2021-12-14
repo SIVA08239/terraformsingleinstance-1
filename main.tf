@@ -4,13 +4,6 @@ provider "aws" {
     profile = "${var.profile}"
 }
 
-terraform {
-  backend "s3" {
-    bucket = "sreeterraformbucket"
-    key    = "devopsb19jenkins.tfstate"
-    region = "us-east-1"
-  }
-}
 
 resource "aws_vpc" "default" {
     cidr_block = "${var.vpc_cidr}"
